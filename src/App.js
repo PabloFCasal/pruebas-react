@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import SimpleComponent from './components/SimpleComponent';
-
-
+import ComponentWithPropAndState from './components/ComponentWithPropAndState'
 
 function ComponentAsAFunction (props){
 
@@ -17,7 +16,6 @@ function ComponentAsAFunction (props){
 function App() {
 
  
-
     return (
       <div className="components">
         <h2>Varios tipos de componentes en <strong>REACT</strong></h2>
@@ -27,7 +25,9 @@ function App() {
   
         <h3>Component as a function</h3>
         <ComponentAsAFunction/>
-  
+
+        <h3>Component with prop an state</h3>
+        <ComponentWithPropAndState/>
       </div>
     );
 
