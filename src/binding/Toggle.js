@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { tsImportEqualsDeclaration } from '@babel/types';
 
 
 export default class Toggle extends Component {
@@ -10,13 +11,18 @@ export default class Toggle extends Component {
 
     }
     // Classic bindig. Using .bind at the constructor method
-
         handleClickBinded () {
 
             this.state((state) => ({isToggleOn: !state.isToggleOn}));
-
-
     }    
+
+
+    // Experimental way to binding
+    handleClickClassProperty = () => {
+        this.setState( state => ({
+            isToggleOn: !this.isToggleOn
+        }));
+    }
 
 
     render (){
@@ -27,8 +33,10 @@ export default class Toggle extends Component {
                 <h3>Simple binding</h3>
                 <button onClick={this.handleClickBinded}>With binding</button>
 
-
-
+                
+                <h3>With event creation</h3>
+                <button onClick={() => this.state.handleClickBinded()}>
+                    With event creation </button>
 
 
 
