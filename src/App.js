@@ -29,7 +29,21 @@ function App() {
         <h3>Component with prop an state</h3>
         <ComponentWithPropAndState/>
       </div>
+
+      <div className="binding">
+
+
+
+
+
+
+
+
+      </div>
     );
+
+
+
 
 
   
